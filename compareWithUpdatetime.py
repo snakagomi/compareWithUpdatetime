@@ -1,4 +1,3 @@
-from compareWithExcel import sliceStartAndEndCharacter
 from tkinter import simpledialog,messagebox
 import datetime
 import os
@@ -19,6 +18,10 @@ def main():
     else:
         messagebox.showerror('エラー', 'シートが違うから確認して')
 
+def sliceStartAndEndCharacter(targetString):
+    slicedStartCharacterString = targetString[1:]
+    slicedEndCharacterString = slicedStartCharacterString[:-1]
+    return slicedEndCharacterString
 
 # メイン処理
 if __name__ == "__main__":
